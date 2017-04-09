@@ -19,8 +19,11 @@ public class MovieCursorWrapper extends CursorWrapper{
     public Movie getMovie(){
 
         int id = getInt(getColumnIndex(Columns._ID));
-        String name = getString(getColumnIndex(MoviesSchema.MoviesTable.Columns.NAME));
-        String description = getString(getColumnIndex(Columns.DESCRIPTION));
+        String name = getString(getColumnIndex(MoviesSchema.MoviesTable.Columns.DB_NAME));
+        String description = getString(getColumnIndex(MoviesSchema.MoviesTable.Columns.DESCRIPTION));
+//        String latitude = getString(getColumnIndex(MoviesSchema.MoviesTable.Columns.LATITUDE));
+//        String longitude = getString(getColumnIndex(Columns.LONGITUDE));
+//        String picId = getString(getColumnIndex(Columns.PICID));
         return new Movie (id, name,description);
 
     }

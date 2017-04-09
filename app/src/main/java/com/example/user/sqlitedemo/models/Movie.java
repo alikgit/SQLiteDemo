@@ -8,17 +8,33 @@ public class Movie {
     private int id;
     private String name;
     private String description;
+    private String latitude;
+//    private String longitude;
+//    private String picId;
 
     public Movie() {
+        id = 0;
         name = "";
         description = "";
+        latitude = "";
+//        longitude = "";
+//        picId = "";
     }
-
+//
+//    public Movie(int id, String name, String description) {
+//        this.id = id;
+//        this.name = name;
+//        this.description = description;
+//    }
     public Movie(int id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
+//        this.latitude = latitude;
+//        this.longitude = longitude;
+//        this.picId = picId;
     }
+
 
     public int getId() {
         return id;
@@ -44,12 +60,47 @@ public class Movie {
         this.description = description;
     }
 
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+//
+//    public String getLongitude() {
+//        return longitude;
+//    }
+//
+//    public void setLongitude(String longitude) {
+//        this.longitude = longitude;
+//    }
+//
+//    public String getPicId() {
+//        return picId;
+//    }
+//
+//    public void setPicId(String picId) {
+//        this.picId = picId;
+//    }
+
+    //    @Override
+//    public String toString() {
+//        return  "\n"+
+//                "Id: " + id + "\n" +
+//                "Name: " + name + "\n" +
+//                "Description: " + description + "\n";
+//    }
     @Override
     public String toString() {
-        return    "------------------------------\n" + "Id=" + id + "\n" +
-                "Name=" + name + "\n" +
-                "Description=" + description + "\n"
-                + "------------------------------\n";
+        return  "\n"+
+                "Id: " + id + "\n" +
+                "Name: " + name + "\n" +
+                "Description: " + description + "\n"
+//                "Latitude: " + latitude + "\n"
+//                "Longitude: " + longitude + "\n" +
+//                "PicId" + picId + "\n"
+                ;
     }
 }
 
